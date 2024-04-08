@@ -1,16 +1,35 @@
+<div align="center">
+
 # Confronting Ambiguity in 6D Object Pose Estimation via Score-Based Diffusion on SE(3)
 
 CVPR 2024
 
-Authors: Tsu-Ching Hsiao, Hao-Wei Chen, Hsuan-Kung Yang, Chun-Yi Lee
+<font size="4">
+Tsu-Ching Hsiao&emsp;
+Hao-Wei Chen&emsp;
+Hsuan-Kung Yang&emsp;
+Chun-Yi Lee&emsp;
+</font>
+<br>
+
+<font size="4">
+Elsa Lab, National Tsing Hua University
+</font>
+
+| <a href="https://arxiv.org/abs/2305.15873">arXiv</a> |
 
 
-Official implementation in JAX.
+
+
+
 
 
 ![se3-diffusion-cover-gt-right-1](https://github.com/Ending2015a/liepose-diffusion/assets/18180004/b10445f3-497b-4a84-bc3e-1d7332e1f8b6)
 
-![image](https://github.com/Ending2015a/liepose-diffusion/assets/18180004/54ec8ce1-5d0f-421a-af6a-3a52d100c073)
+
+Official implementation in [JAX](https://github.com/google/jax).
+
+</div>
 
 ## Abstract
 
@@ -46,7 +65,9 @@ https://github.com/Ending2015a/liepose-diffusion/assets/18180004/ecf578a9-25bf-4
 https://github.com/Ending2015a/liepose-diffusion/assets/18180004/24056e51-52b1-4ba9-8bb9-50cc55febdba
 
 
+## Cite
 
+TBA
 
 
 
