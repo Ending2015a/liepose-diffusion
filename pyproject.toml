@@ -1,0 +1,145 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "liepose"
+dynamic = ["version", "dependencies"]
+description = '[CVPR 2024] Confronting Ambiguity in 6D Object Pose Estimation via Score-Based Diffusion on SE(3)'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Ending2015a", email = "joehsiao@gapp.nthu.edu.tw" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Documentation = "https://github.com/Ending2015a/liepose-diffusion#readme"
+Issues = "https://github.com/Ending2015a/liepose-diffusion/issues"
+Source = "https://github.com/Ending2015a/liepose-diffusion"
+
+[tool.hatch.version]
+path = "src/liepose/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/liepose"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.hatch.envs.test]
+type = "virtual" # use virtualenv
+python-sources = ["external"] # use system python
+system-packages = true # allow access to system package
+skip-install = true # skip install package
+dependencies = [
+  "pytest",
+  "coverage[toml]>=6.5"
+]
+
+[tool.hatch.envs.test.scripts]
+test = "pytest {args}"
+test-cov = "coverage run -m pytest {args}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[tool.hatch.envs.lint]
+path = '.venv/lint'
+detached = true
+dependencies = [
+  "ruff>=0.1.9"
+]
+
+[tool.hatch.envs.lint.scripts]
+format = [
+  "ruff format {args:.}",
+  "sort requirements.txt -o requirements.txt"
+]
+lint = [
+  "ruff check --fix --output-format=full --show-fixes {args:.}"
+]
+check = [
+  "ruff check {args:.}"
+]
+all = [
+  "lint",
+  "format"
+]
+
+
+[tool.ruff]
+target-version = "py38"
+indent-width = 2
+line-length = 88
+extend-include = ["*.py"]
+extend-exclude = ["lib/", "dataset/"]
+# Check the full list here:
+#  https://docs.astral.sh/ruff/rules/
+
+[tool.ruff.lint]
+select = [
+  "B",
+  "C4",
+  "E",
+  "F",
+  "I",
+  "W",
+  "UP",
+]
+fixable = ["ALL"]
+ignore = [
+  "B006", "B007", "B008", "B017", "B018", "B019", "B024",
+  "B028", "B904", "B905",
+  "C408",
+  "E402", "E501", # B950 instead
+  "E721", "E731", "E741",
+  "F405", "F821", "F841", "F842"
+]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["liepose"]
+
+[tool.ruff.format]
+docstring-code-format = false
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+
+[tool.coverage.run]
+source_pkgs = ["liepose", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/liepose/__about__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:"
+]
