@@ -77,6 +77,7 @@ TBA
 - [Experiments](#experiments)
     - [SYMSOL](#symsol)
     - [SYMSOL-T](#symsol-t)
+    - [T-LESS](#t-less)
 - [Metrics](#metrics)
     - [SYMSOL and SYMSOL-T](#symsol-and-symsol-t)
 - [Datasets](#datasets)
