@@ -83,7 +83,7 @@ TBA
 - [Datasets](#datasets)
   - [Customized Datasets](#customized-datasets)
 - [Multi-GPUs Training](#multi-gpus-training)
-- [Cite](#cite)
+- [Citation](#citation)
 
 
 ## Installation
@@ -249,6 +249,13 @@ We will announce our workflow to annotate your custom dataset in another repo [E
 
 In default, single-GPU is used for training as we set the `CUDA_VISIBLE_DEVICES='0'` inside the Makefile. You can enable multi-GPU training simply by setting the `CUDA_VISIBLE_DEVICES` to multiple devices. The framework will automatically switch to the parallel training mode. For example, `export CUDA_VISIBLE_DEVICES='0,1,2'`, will use 3 devices for training, and the `batch_size` is divided by 3 for each device.
 
-## Cite
+## Citation
 
-TBA
+```
+@inproceedings{hsiao2023confronting,
+    title={Confronting Ambiguity in 6D Object Pose Estimation via Score-Based Diffusion on SE(3)},
+    author={Hsiao, Tsu-Ching and Chen, Hao-Wei and Yang, Hsuan-Kung and Lee, Chun-Yi},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2024}
+}
+```
