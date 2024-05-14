@@ -252,7 +252,7 @@ In default, single-GPU is used for training as we set the `CUDA_VISIBLE_DEVICES=
 ## Citation
 
 ```
-@inproceedings{hsiao2023confronting,
+@inproceedings{hsiao2024confronting,
     title={Confronting Ambiguity in 6D Object Pose Estimation via Score-Based Diffusion on SE(3)},
     author={Hsiao, Tsu-Ching and Chen, Hao-Wei and Yang, Hsuan-Kung and Lee, Chun-Yi},
     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
