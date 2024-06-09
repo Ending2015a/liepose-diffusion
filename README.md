@@ -46,6 +46,11 @@ Addressing pose ambiguity in 6D object pose estimation from single RGB images pr
 ## Videos
 
 
+
+https://github.com/Ending2015a/liepose-diffusion/assets/18180004/ab0df460-8c73-4b96-9d5a-8f8132d74b37
+
+
+
 <details>
   <summary>Click here to see the SYMSOL-T demos</summary>
 
@@ -63,13 +68,6 @@ https://github.com/Ending2015a/liepose-diffusion/assets/18180004/ecf578a9-25bf-4
 
 https://github.com/Ending2015a/liepose-diffusion/assets/18180004/24056e51-52b1-4ba9-8bb9-50cc55febdba
 
-</details>
-
-
-<details>
-  <summary>Click here to see the real-world demos</summary>
-
-TBA
 </details>
 
 ---
