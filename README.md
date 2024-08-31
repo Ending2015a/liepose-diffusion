@@ -83,7 +83,6 @@ https://github.com/Ending2015a/liepose-diffusion/assets/18180004/24056e51-52b1-4
 - [Metrics](#metrics)
     - [SYMSOL and SYMSOL-T](#symsol-and-symsol-t)
 - [Datasets](#datasets)
-  - [Customized Datasets](#customized-datasets)
 - [Multi-GPUs Training](#multi-gpus-training)
 - [Citation](#citation)
 
@@ -240,12 +239,6 @@ make run
 python3 liepose.data.symsolt.synth --path "dataset/symsolt/my-symsolt-5k" "num_samples=25000"
 ```
 For more configs, see the script.
-
-### Customized Datasets
-
-TBA.
-
-We will announce our workflow to annotate your custom dataset in another repo [Ending2015a/custom-bop-tool](https://github.com/Ending2015a/custom-bop-tool).
 
 ## Multi-GPUs Training
 
