@@ -16,7 +16,7 @@ Chun-Yi Lee&emsp;
 Elsa Lab, National Tsing Hua University
 </font>
 
-| <a href="https://arxiv.org/abs/2305.15873">arXiv</a> |
+| <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Hsiao_Confronting_Ambiguity_in_6D_Object_Pose_Estimation_via_Score-Based_Diffusion_CVPR_2024_paper.pdf">Paper</a> | <a href="https://arxiv.org/abs/2305.15873">arXiv</a> | <a href="https://ending2015a.github.io/liepose-diffusion-6dof/">Project</a> |
 
 
 
